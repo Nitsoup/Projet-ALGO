@@ -1,0 +1,28 @@
+#ifndef HEADER_H_INCLUDED
+#define HEADER_H_INCLUDED
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <windows.h>
+
+
+#define RESET "\033[0m"
+#define BLACK   "\033[0;30m"
+#define RED     "\033[0;31m"
+#define GREEN   "\033[0;32m"
+#define YELLOW  "\033[0;33m"
+#define BLUE    "\033[0;34m"
+#define MAGENTA "\033[0;35m"
+#define CYAN    "\033[0;36m"
+
+#define KEY_UP 72
+#define KEY_DOWN 80
+#define KEY_ENTER 13
+#define KEY_SPECIAL 224
+
+
+
+#endif // HEADER_H_INCLUDED
+
+int menu();
