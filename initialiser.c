@@ -48,10 +48,9 @@ void permuterItems(Plateau *p, int x1, int y1, int x2, int y2) {
 // Sous-programme : Gestion du curseur et de l'échange
 void gererAction(Plateau *p, Contrat *c) {
     char touche;
-    // Ajout de 'v' dans le message d'aide
+    
     printf("\nCOMMANDES : z(haut), s(bas), q(gauche), d(droite), p(permuter), v(sauvegarder) + ENTREE : ");
     
-    // L'espace avant %c est CRUCIAL pour absorber le 'Entrée' précédent
     scanf(" %c", &touche); 
 
     if (touche == 'z' && p->curseurY > 0) p->curseurY--;
@@ -59,7 +58,7 @@ void gererAction(Plateau *p, Contrat *c) {
     else if (touche == 'q' && p->curseurX > 0) p->curseurX--;
     else if (touche == 'd' && p->curseurX < NB_COLONNES - 1) p->curseurX++;
     else if (touche == 'v') {
-        // Appeler la sauvegarde (on met des valeurs par défaut pour vies et niveau si non dispos ici)
+        // Appeler la sauvegarde 
         sauvegarderPartie(*p, *c, 3, 1);
     }
     else if (touche == 'p') {
@@ -80,4 +79,5 @@ void gererAction(Plateau *p, Contrat *c) {
             stabiliserPlateau(p, c);
         }
     }
+
 }
